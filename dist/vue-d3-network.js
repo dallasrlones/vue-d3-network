@@ -2146,37 +2146,27 @@
                         id: "link-labels"
                     }
                 }, t._l(t.links, function(e) {
-                    var cssClass = "link-label";
 
-                    var targetX = e.target.x;
-                    var targetY = e.target.y;
-                    var sourceX = e.source.x;
-                    var sourceY = e.source.y;
-
-                    if(targetY > sourceY && targetX > sourceX){
-                        cssClass = "top-right";
+                    if(e.source.x < e.target.x){
+                        var centerX = e.source.x + (Math.abs(e.target.x - e.source.x) / 2);
+                    } else {
+                        var centerX = e.target.x + (Math.abs(e.source.x - e.target.x) / 2);
                     }
 
-                    if(targetY > sourceY && targetX < sourceX){
-                        cssClass = "top-left";
-                    }
-
-                    if(targetY < sourceY && targetX < sourceX){
-                        cssClass = "bottom-left";
-                    }
-
-                    if(targetY < sourceY && targetX > sourceX){
-                        cssClass = "bottom-right";
+                    if(e.source.y < e.target.y){
+                        var centerY = e.source.y + (Math.abs(e.target.y - e.source.y) / 2);
+                    } else {
+                        var centerY = e.target.y + (Math.abs(e.source.y - e.target.y) / 2);
                     }
 
                     return n("text", {
-                        staticClass: cssClass
-                    }, [n("textPath", {
+                        staticClass: "link-label",
                         attrs: {
-                            "xlink:href": "#" + t.linkId(e),
-                            startOffset: "50%"
+                            //startOffset: "50%"
+                            x: centerX,
+                            y: centerY
                         }
-                    }, [t._v(t._s(e.name || e.id))])])
+                    }, [t._v(t._s(e.name || e.id))])
                 })) : t._e(), t.nodeLabels ? n("g", {
                     staticClass: "labels",
                     attrs: {
