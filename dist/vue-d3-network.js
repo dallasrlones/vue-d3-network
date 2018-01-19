@@ -2227,29 +2227,6 @@
                             }
                         }, [t._v(t._s(e.id))])
                     ])
-
-
-                    return n("text", {
-                        staticClass: "node-label",
-                        class: e._labelClass ? e._labelClass : "",
-                        attrs: {
-                            x: e.x + t.getNodeSize(e) / 2 + t.fontSize / 2,
-                            y: e.y + t.labelOffset.y,
-                            "font-size": t.fontSize,
-                            "stroke-width": t.fontSize / 8
-                        }
-                    }, [
-                        n("text", {
-                            staticClass: "node-label",
-                            class: e._labelClass ? e._labelClass : "",
-                            attrs: {
-                                x: e.x + t.getNodeSize(e) / 2 + t.fontSize / 2,
-                                y: e.y + t.labelOffset.y,
-                                "font-size": t.fontSize,
-                                "stroke-width": t.fontSize / 8
-                            }
-                        }, [t._v(t._s(e.ipv4))])
-                    ], [t._v(t._s(e.name))])
                 })) : t._e()])
             },
             staticRenderFns: []
