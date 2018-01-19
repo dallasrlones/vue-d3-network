@@ -2173,13 +2173,11 @@
                         id: "node-labels"
                     }
                 }, t._l(t.nodes, function(e) {
-
-
                     return n("g", {
                         staticClass : "node-group",
                         class: e._labelClass ? e._labelClass : "",
                         attrs: {
-                            x: e.x + t.getNodeSize(e) / 2 + t.fontSize / 2,
+                            x: e.x + t.getNodeSize(e) / 2 + t.fontSize,
                             y: e.y + t.labelOffset.y
                         }
                     }, [
@@ -2188,7 +2186,7 @@
                             class: e._labelClass ? e._labelClass : "",
                             attrs: {
                                 "text-anchor": "middle",
-                                x: e.x + t.getNodeSize(e) / 2 + t.fontSize * 4,
+                                x: e.x + t.getNodeSize(e) / 2 + t.fontSize * 5,
                                 y: e.y - t.labelOffset.y * 4,
                                 "font-size": t.fontSize,
                                 "stroke-width": t.fontSize / 8
@@ -2199,7 +2197,7 @@
                             class: e._labelClass ? e._labelClass : "",
                             attrs: {
                                 "text-anchor": "middle",
-                                x: e.x + t.getNodeSize(e) / 2 + t.fontSize * 4,
+                                x: e.x + t.getNodeSize(e) / 2 + t.fontSize * 5,
                                 y: e.y - t.labelOffset.y,
                                 "font-size": t.fontSize,
                                 "stroke-width": t.fontSize / 8
@@ -2210,7 +2208,7 @@
                             class: e._labelClass ? e._labelClass : "",
                             attrs: {
                                 "text-anchor": "middle",
-                                x: e.x + t.getNodeSize(e) / 2 + t.fontSize * 4,
+                                x: e.x + t.getNodeSize(e) / 2 + t.fontSize * 5,
                                 y: e.y + t.labelOffset.y * 2,
                                 "font-size": t.fontSize,
                                 "stroke-width": t.fontSize / 8
