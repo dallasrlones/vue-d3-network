@@ -2147,24 +2147,24 @@
                     }
                 }, t._l(t.links, function(e) {
 
-                    if(e.source.x < e.target.x){
+                    if(e.source.x <= e.target.x){
                         var centerX = e.source.x + (Math.abs(e.target.x - e.source.x) / 2);
                     } else {
                         var centerX = e.target.x + (Math.abs(e.source.x - e.target.x) / 2);
                     }
 
-                    if(e.source.y < e.target.y){
-                        var centerY = e.source.y + (Math.abs(e.target.y - e.source.y) / 2);
+                    if(e.source.y <= e.target.y){
+                        var centerY = e.source.y + (Math.abs(e.source.y - e.target.y) / 2);
                     } else {
-                        var centerY = e.target.y + (Math.abs(e.source.y - e.target.y) / 2);
+                        var centerY = e.target.y + (Math.abs(e.target.y - e.source.y) / 2);
                     }
 
                     return n("text", {
                         staticClass: "link-label",
                         attrs: {
                             //startOffset: "50%"
-                            x: centerX,
-                            y: centerY
+                            x: centerX || 0,
+                            y: centerY || 0
                         }
                     }, [t._v(t._s(e.name || e.id))])
                 })) : t._e(), t.nodeLabels ? n("g", {
